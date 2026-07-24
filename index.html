@@ -13,6 +13,13 @@
 
 <body>
 
+<audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicBtn">🎵 Play Music</button>
+
+
 <div class="background"></div>
 
 
@@ -45,14 +52,11 @@
 </section>
 
 
-
 <section class="shop">
 
 <h2>Products</h2>
 
-
 <div class="products">
-
 
     <div class="card">
         <h3>blyytz Drag Macro</h3>
@@ -61,14 +65,12 @@
         <a href="https://payhip.com/b/x91bK" class="buy" target="_blank">Buy Now</a>
     </div>
 
-
     <div class="card">
         <h3>blyytz Free Tweaks</h3>
         <p>Free performance tweaks and optimizations by blyytz.</p>
         <div class="price">FREE</div>
         <a href="https://payhip.com/b/h39mw" class="buy" target="_blank">Get Now</a>
     </div>
-
 
     <div class="card">
         <h3>blyytz Tweak Pack</h3>
@@ -77,14 +79,12 @@
         <a href="https://payhip.com/b/Vvz8t" class="buy" target="_blank">Buy Now</a>
     </div>
 
-
     <div class="card">
         <h3>blyytz Controller Macro</h3>
         <p>Premium controller macro by blyytz.</p>
         <div class="price">$5.00</div>
         <a href="https://payhip.com/b/O7sut" class="buy" target="_blank">Buy Now</a>
     </div>
-
 
     <div class="card">
         <h3>blyytz Bloom & Shotgun Reducer Pack</h3>
@@ -93,14 +93,12 @@
         <a href="https://payhip.com/b/USHci" class="buy" target="_blank">Buy Now</a>
     </div>
 
-
     <div class="card">
         <h3>blyytz Everything Pack</h3>
         <p>All blyytz products bundled together.</p>
         <div class="price">$25.00</div>
         <a href="https://payhip.com/b/9E6Pd" class="buy" target="_blank">Buy Now</a>
     </div>
-
 
     <div class="card">
         <h3>PS5 Tweak Guide</h3>
@@ -109,14 +107,12 @@
         <a href="https://payhip.com/b/QF8WY" class="buy" target="_blank">Buy Now</a>
     </div>
 
-
     <div class="card">
         <h3>Xbox Tweak Guide</h3>
         <p>Xbox One S and Series X/S Tweak Guide.</p>
         <div class="price">$5.00</div>
         <a href="https://payhip.com/b/dIW72" class="buy" target="_blank">Buy Now</a>
     </div>
-
 
     <div class="card">
         <h3>HWID Changer</h3>
@@ -125,11 +121,9 @@
         <a href="https://payhip.com/b/UgNT5" class="buy" target="_blank">Buy Now</a>
     </div>
 
-
 </div>
 
 </section>
-
 
 
 <section class="reviews">
@@ -146,12 +140,9 @@
 
 </div>
 
-
 <div id="reviewsList"></div>
 
-
 </section>
-
 
 
 <script>
@@ -161,26 +152,21 @@ function addReview() {
     const name = document.getElementById("reviewName").value;
     const text = document.getElementById("reviewText").value;
 
-
     if (!name || !text) {
         alert("Please fill out both fields!");
         return;
     }
 
-
     const review = document.createElement("div");
 
     review.className = "review";
-
 
     review.innerHTML = `
         <h3>${name}</h3>
         <p>${text}</p>
     `;
 
-
     document.getElementById("reviewsList").prepend(review);
-
 
     document.getElementById("reviewName").value = "";
     document.getElementById("reviewText").value = "";
@@ -188,7 +174,6 @@ function addReview() {
 }
 
 </script>
-
 
 
 <section class="contact">
@@ -204,8 +189,30 @@ blyytztweakz@gmail.com
 </section>
 
 
-
 <script src="script.js"></script>
+
+
+<script>
+
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
+
+music.volume = 0.25;
+
+musicBtn.onclick = function() {
+
+    if (music.paused) {
+        music.play();
+        musicBtn.innerHTML = "🔊 Pause Music";
+    } else {
+        music.pause();
+        musicBtn.innerHTML = "🎵 Play Music";
+    }
+
+};
+
+</script>
+
 
 </body>
 
