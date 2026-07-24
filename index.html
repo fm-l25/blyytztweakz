@@ -27,21 +27,13 @@
 
     <div class="buttons">
 
-        <a href="https://www.tiktok.com/@ybfinn" target="_blank">
-            TikTok
-        </a>
+        <a href="https://www.tiktok.com/@ybfinn" target="_blank">TikTok</a>
 
-        <a href="https://www.youtube.com/@blyytzzz" target="_blank">
-            YouTube
-        </a>
+        <a href="https://www.youtube.com/@blyytzzz" target="_blank">YouTube</a>
 
-        <a href="https://cash.app/$guapoofinn" target="_blank">
-            Cash App
-        </a>
+        <a href="https://cash.app/$guapoofinn" target="_blank">Cash App</a>
 
-        <a href="https://discord.gg/zg4rk8xCsw" target="_blank">
-            Discord Server
-        </a>
+        <a href="https://discord.gg/zg4rk8xCsw" target="_blank">Discord Server</a>
 
     </div>
 
@@ -140,13 +132,72 @@
 
 
 
+<section class="reviews">
+
+<h2>Leave a Review</h2>
+
+<div class="review-box">
+
+<input id="reviewName" type="text" placeholder="Your name">
+
+<textarea id="reviewText" placeholder="Write your review..."></textarea>
+
+<button onclick="addReview()">Submit Review</button>
+
+</div>
+
+
+<div id="reviewsList"></div>
+
+
+</section>
+
+
+
+<script>
+
+function addReview() {
+
+    const name = document.getElementById("reviewName").value;
+    const text = document.getElementById("reviewText").value;
+
+
+    if (!name || !text) {
+        alert("Please fill out both fields!");
+        return;
+    }
+
+
+    const review = document.createElement("div");
+
+    review.className = "review";
+
+
+    review.innerHTML = `
+        <h3>${name}</h3>
+        <p>${text}</p>
+    `;
+
+
+    document.getElementById("reviewsList").prepend(review);
+
+
+    document.getElementById("reviewName").value = "";
+    document.getElementById("reviewText").value = "";
+
+}
+
+</script>
+
+
+
 <section class="contact">
 
 <h2>Contact</h2>
 
 <p>Email me for any inquiries</p>
 
-<a href="mailto:YOUR-EMAIL@gmail.com">
+<a href="mailto:blyytztweakz@gmail.com">
 blyytztweakz@gmail.com
 </a>
 

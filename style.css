@@ -225,3 +225,54 @@ h1 {
     }
 
 }
+
+.reviews {
+    margin-top: 60px;
+    padding: 30px;
+    text-align: center;
+}
+
+.review-box {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.review-box input,
+.review-box textarea {
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    font-size: 15px;
+}
+
+.review-box textarea {
+    height: 120px;
+    resize: none;
+}
+
+.review-box button {
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    background: white;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.review-box button:hover {
+    opacity: 0.8;
+}
+
+.review {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.08);
+}
